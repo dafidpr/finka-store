@@ -1,0 +1,12 @@
+#reader__dashboard_section_csr span button {
+    background-color: #5156be;
+    border: none;
+    padding: 10px;
+    color: white;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+#reader__dashboard_section_csr span button:hover {
+    background-color: #383c8b;
+}

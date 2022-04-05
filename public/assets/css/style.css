@@ -1,0 +1,177 @@
+v-loader {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: -webkit-fill-available;
+    margin: -15px -10px;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff56;
+    z-index: 1111;
+}
+
+.loader-content {
+    display: block;
+    text-align: center;
+    margin-top: -15%;
+}
+
+v-loader.hide {
+    opacity: 0;
+    z-index: -1;
+    animation: hideLoader 1s ease-in-out;
+}
+
+@keyframes hideLoader {
+    0% {
+        z-index: 1111;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+Select group
+ */
+.form-selectgroup {
+    display: inline-flex;
+    margin: 0 -.5rem -.5rem 0;
+    flex-wrap: wrap;
+}
+
+.form-selectgroup .form-selectgroup-item {
+    margin: 0 .5rem .5rem 0;
+}
+
+.form-selectgroup-vertical {
+    flex-direction: column;
+}
+
+.form-selectgroup-item {
+    display: block;
+    position: relative;
+}
+
+.form-selectgroup-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form-selectgroup-label {
+    position: relative;
+    display: block;
+    min-width: calc(1.4285714em + 0.875rem + 2px);
+    margin: 0;
+    padding: 0.4375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.4285714;
+    color: #6e7582;
+    background: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid rgba(110, 117, 130, 0.2);
+    border-radius: 3px;
+    transition: border-color .3s, background .3s, color .3s;
+}
+
+.form-selectgroup-label .icon:only-child {
+    margin: 0 -.25rem;
+}
+
+.form-selectgroup-label:hover {
+    color: #354052;
+}
+
+.form-selectgroup-check {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid rgba(110, 117, 130, 0.2);
+    vertical-align: middle;
+}
+
+.form-selectgroup-input[type="checkbox"]+.form-selectgroup-label .form-selectgroup-check {
+    border-radius: 3px;
+}
+
+.form-selectgroup-input[type="radio"]+.form-selectgroup-label .form-selectgroup-check {
+    border-radius: 50%;
+}
+
+.form-selectgroup-input:checked+.form-selectgroup-label .form-selectgroup-check {
+    background-color: #206bc4;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 1rem;
+    border-color: rgba(110, 117, 130, 0.2);
+}
+
+.form-selectgroup-input[type="checkbox"]:checked+.form-selectgroup-label .form-selectgroup-check {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8.5l2.5 2.5l5.5 -5.5'/%3e%3c/svg%3e");
+}
+
+.form-selectgroup-input[type="radio"]:checked+.form-selectgroup-label .form-selectgroup-check {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle r='3' fill='%23ffffff' cx='8' cy='8' /%3e%3c/svg%3e");
+}
+
+.form-selectgroup-input:checked+.form-selectgroup-label {
+    z-index: 1;
+    color: #206bc4;
+    background: rgba(32, 107, 196, 0.04);
+    border-color: #7aade9;
+    box-shadow: 0 1px 1px 0 rgba(32, 107, 196, 0.2);
+}
+
+.form-selectgroup-input:focus+.form-selectgroup-label {
+    z-index: 2;
+    color: #206bc4;
+    border-color: #7aade9;
+    box-shadow: 0 0 0 0.2rem rgba(32, 107, 196, 0.25);
+}
+
+/**
+Alternate version of form select group
+ */
+.form-selectgroup-boxes .form-selectgroup-label {
+    text-align: left;
+    padding: 1.25rem 1.25rem;
+    color: inherit;
+}
+
+.form-selectgroup-boxes .form-selectgroup-input:checked+.form-selectgroup-label {
+    color: inherit;
+}
+
+.form-selectgroup-boxes .form-selectgroup-input:checked+.form-selectgroup-label .form-selectgroup-title {
+    color: #206bc4;
+}
+
+.form-selectgroup-boxes .form-selectgroup-input:checked+.form-selectgroup-label .form-selectgroup-label-content {
+    opacity: 1;
+}
+
+/**
+Select group
+ */
+.form-selectgroup-pills {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.form-selectgroup-pills .form-selectgroup-item {
+    flex-grow: 0;
+}
+
+.form-selectgroup-pills .form-selectgroup-label {
+    border-radius: 50px;
+}
