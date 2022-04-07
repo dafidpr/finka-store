@@ -29,6 +29,7 @@ Route::get('auth/logout', [AuthController::class, 'logout'])->name('auth.logout'
 Route::prefix('administrator')->middleware('auth')->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('sales-chart', [DashboardController::class, 'getSaleChart'])->name('dashboard.sales-chart');
     });
 
     Route::prefix('users')->group(function () {

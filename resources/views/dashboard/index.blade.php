@@ -13,4 +13,32 @@
         di
         Aplikasi Penjulan Finka Store
     </div>
+    <div class="row mt-5">
+        <!-- end col -->
+        <div class="col-xl-12">
+            <div class="row">
+                <div class="col-xl-12">
+                    <!-- card -->
+                    <div class="card card-h-100">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap align-items-center mb-4">
+                                <h5 class="card-title me-2">Grafik Penjualan Tahun {{ date('Y') }}</h5>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-sm">
+                                    <div id="sales-chart" data-colors='["#5156be", "#34c38f"]' class="apex-charts">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end col -->
+    </div> <!-- end row-->
 @endsection
