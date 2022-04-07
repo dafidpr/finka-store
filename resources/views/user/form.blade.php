@@ -9,7 +9,6 @@
 @endsection
 
 @section('content')
-
     <div class="col-md-6 col-sm-8 col-12">
         <div class="card shadow-sm mb-3">
             <div class="card-body">
@@ -20,11 +19,6 @@
                         <label for="">Nama <span class="text-danger">*</span></label>
                         <input type="text" name="name" class="form-control" placeholder="Nama" autocomplete="off"
                             value="{{ isset($values) ? $values->name : '' }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="">Posisi <span class="text-danger">*</span></label>
-                        <input type="text" name="position" class="form-control" placeholder="Posisi" autocomplete="off"
-                            value="{{ isset($values) ? $values->position : '' }}">
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-12">
@@ -74,5 +68,4 @@
             </div>
         </div>
     </div>
-
 @endsection

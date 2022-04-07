@@ -14,14 +14,6 @@ table = initDataTable('#dataTable', [{
     {
         name: 'name',
         data: 'name',
-        mRender: function (data, type, row) {
-            var render = `
-                <strong>${data}</strong><br>
-                <i class="text-muted small">${row.position}</i>
-            `
-
-            return render
-        }
     },
     {
         name: 'username',

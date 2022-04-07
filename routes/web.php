@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Sales\SaleListController;
+use App\Http\Controllers\Sales\SalesController;
 use App\Http\Controllers\User\UserController;
 
 /*
@@ -37,6 +39,22 @@ Route::prefix('administrator')->middleware('auth')->group(function () {
         Route::get('{user}/edit', [UserController::class, 'edit'])->name('users.edit');
         Route::post('{user}/update', [UserController::class, 'update'])->name('users.update');
         Route::delete('{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
+    });
+
+    Route::prefix('sales')->group(function () {
+        Route::get('', [SalesController::class, 'index'])->name('sales');
+        Route::post('/store', [SalesController::class, 'store'])->name('sales.store');
+        Route::post('{sale}/update', [SalesController::class, 'update'])->name('sales.update');
+        Route::get('/print', [SalesController::class, 'print'])->name('sales.print');
+        Route::delete('{saleDetail}/delete', [SalesController::class, 'destroySaleItem'])->name('sales.destroy_sale_item');
+
+        Route::prefix('list')->group(function () {
+            Route::get('', [SaleListController::class, 'index'])->name('sales.list');
+            Route::get('getData', [SaleListController::class, 'getData'])->name('sales.list.getData');
+            Route::get('{sale}/detail', [SaleListController::class, 'detail'])->name('sales.list.detail');
+            Route::delete('{sale}/delete', [SaleListController::class, 'destroy'])->name('sales.list.destroy');
+            Route::get('{sale}/edit', [SalesController::class, 'edit'])->name('sales.edit');
+        });
     });
 
 

@@ -35,7 +35,7 @@ class UserController extends Controller
      */
     public function getData()
     {
-        return DataTables::of(User::whereNull('customer_id')->get())->make(true);
+        return DataTables::of(User::all())->make(true);
     }
 
     /**
