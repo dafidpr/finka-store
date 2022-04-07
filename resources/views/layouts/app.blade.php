@@ -216,4 +216,11 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/main/app.js') }}"></script>
     <script src="{{ asset('assets/libs/autonumeric/autoNumeric.min.js') }}"></script>
+
+    {{-- <script src="{{ asset('assets/libs/datepicker/date-picker/datepicker.js') }}"></script>
+    <script src="{{ asset('assets/libs/datepicker/date-picker/datepicker.en.js') }}"></script>
+    <script src="{{ asset('assets/libs/datepicker/date-picker/datepicker.custom.js') }}"></script>
+    <script src="{{ asset('assets/libs/datepicker/daterange-picker/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/datepicker/daterange-picker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('assets/libs/datepicker/daterange-picker/daterange-picker.custom.js') }}"></script> --}}
 @endsection

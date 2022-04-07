@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Reports\SaleReportController;
 use App\Http\Controllers\Sales\SaleListController;
 use App\Http\Controllers\Sales\SalesController;
 use App\Http\Controllers\User\UserController;
@@ -58,6 +59,12 @@ Route::prefix('administrator')->middleware('auth')->group(function () {
         });
     });
 
+    Route::prefix('reports')->group(function () {
+        Route::prefix('sale')->group(function () {
+            Route::get('', [SaleReportController::class, 'index'])->name('reports.sale');
+            Route::post('search', [SaleReportController::class, 'search'])->name('reports.sale.search');
+        });
+    });
 
     Route::get('update-profile', [UserController::class, 'viewUpdateProfile'])->name('update-profile');
     Route::post('update-profile/{user}', [UserController::class, 'updateProfile'])->name('update-profile.form');

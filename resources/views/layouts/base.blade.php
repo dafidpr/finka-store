@@ -42,6 +42,9 @@
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/style.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/date-picker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/daterange-picker.css') }}"> --}}
 </head>
 
 <body data-layout="horizontal">

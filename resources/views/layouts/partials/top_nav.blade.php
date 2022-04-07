@@ -17,13 +17,14 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle arrow-none" href="{{ route('sales.list') }}" id="topnav-dashboard"
-                        role="button">
+                    <a class="nav-link dropdown-toggle arrow-none" href="{{ route('sales.list') }}"
+                        id="topnav-dashboard" role="button">
                         <i data-feather="shopping-bag"></i><span data-key="t-sale-lists">Daftar Penjualan</span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button">
+                    <a class="nav-link dropdown-toggle arrow-none" href="{{ route('reports.sale') }}"
+                        id="topnav-dashboard" role="button">
                         <i data-feather="file-text"></i><span data-key="t-reports">Laporan</span>
                     </a>
                 </li>
